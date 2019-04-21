@@ -6,14 +6,13 @@ int main(int argc, char** argv){
     long int i, j, count = 0, n = atol(argv[1]);    
     char* buf = (char*) calloc(n+1, sizeof(char));
 
-    for(i=2; i < sqrt((double)n); i++)
-        if(!buf[i])
+    for(i=2; i < n; i++)
+        if(!buf[i]){
             for(j = i*i; j <= n; j+=i)
                 buf[j] |= 1;
+            count ++;
+        }
                 
-    for(i=2; i <= n; i++)
-        if(!buf[i]) 
-            count++;
 
     printf("\n%zu\n", count);
     return 0;
