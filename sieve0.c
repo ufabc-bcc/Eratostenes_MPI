@@ -19,6 +19,7 @@ int main(int argc, char** argv){
 }
 
 
+
 /* 
     3 1000 168
     4 10000 1229
